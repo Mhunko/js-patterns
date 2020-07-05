@@ -32,7 +32,13 @@ function* generator(collection) {
 }
 
 const iterator = new MyIterator(['this', 'is', 'iterator'])
+const gen = generator(['this', 'is', 'iterator'])
 
 for (const val of iterator) {
     console.log('Value: ', val)
 }
+for (const val of gen) {
+    console.log('Value: ', val)
+}
+
+console.log(gen.next().value)
